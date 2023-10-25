@@ -35,7 +35,7 @@ StravaScript is a small Flask project that interfaces with the unofficial Bard A
 
 ## Links
 
-- [Built for the Congressional App Challenge](https://www.congressionalappchallenge.us/students/#prizes)
+- Built for the [Congressional App Challenge](https://www.congressionalappchallenge.us/students/#prizes)
 - [Unofficial Bard API](https://github.com/dsdanielpark/Bard-API/tree/alpha-release)
 - [Google Bard](https://bard.google.com/chat/)
 - [@JoeyZeee](https://www.github.com/joeyzeee)

@@ -1,0 +1,51 @@
+/* Reset default margin and padding for the entire page */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header */
+h1 {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Center the form and add some spacing */
+#upload-form {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style the file input and submit button */
+#gpx-file {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style the output and bard elements */
+#output, #bard {
+    white-space: pre-wrap;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fff;
+    margin: 20px;
+}

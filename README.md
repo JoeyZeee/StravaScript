@@ -1,1 +1,7 @@
-# StravaScript
+# StravaScript: Bard-Powered Text - Joey Zambreno
+
+StravaScript is a small Flask project that interfaces with the unofficial Bard API. You can upload a GPX file, and the program outputs the raw longitude and latitude values of that activity. Bard then takes that as an input, and generates an activity title and description, for running social medias like Strava.
+
+## Authors
+
+- [@JoeyZeeee](https://www.github.com/joeyzeeee)

@@ -16,8 +16,7 @@ StravaScript is a small Flask project that interfaces with the unofficial Bard A
 
 ## Usage
 
-1. Download GPX data from wherever your activity is stored
-     a. Make sure it has a .gpx tag, or the program won't work
+1. Download GPX data from wherever your activity is stored (Make sure it has a .gpx tag, or the program won't work)
    
 2. Upload that file into the website
    

@@ -4,4 +4,4 @@ StravaScript is a small Flask project that interfaces with the unofficial Bard A
 
 ## Authors
 
-- [@JoeyZeeee](https://www.github.com/joeyzeeee)
+- [@JoeyZeee](https://www.github.com/joeyzeee)

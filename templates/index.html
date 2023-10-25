@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StravaScript: Joey Zambreno</title>
+    <!-- Include the external CSS file -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>StravaScript: Bard-Powered Titles and Descriptions - Joey Zambreno</h1>
+    <form id="upload-form" enctype="multipart/form-data">
+        <input type="file" id="gpx-file" accept=".gpx" required>
+        <input type="submit" value="Submit">
+    </form>
+    <pre id="output"></pre>
+    <pre id="bard"></pre>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

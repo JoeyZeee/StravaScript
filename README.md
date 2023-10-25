@@ -5,3 +5,12 @@ StravaScript is a small Flask project that interfaces with the unofficial Bard A
 ## Authors
 
 - [@JoeyZeee](https://www.github.com/joeyzeee)
+
+  
+## Roadmap
+
+- Add Strava API interfacing
+
+- Automatically upload name and description
+  
+- Better UI

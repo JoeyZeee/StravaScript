@@ -5,32 +5,30 @@ document.getElementById("upload-form").addEventListener("submit", async function
     const bardElement = document.getElementById("bard");
 
     outputElement.textContent = "Loading...";
-    outputElement.textContent = "Loading...";
+    bardElement.textContent = "Loading...";
 
     const file = gpxFileInput.files[0];
 
     if (file) {
-            const text = await file.text();
-            const parser = new DOMParser();
-            const xmlDoc = parser.parseFromString(text, "text/xml");
+        const text = await file.text();
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(text, "text/xml");
 
-            let coordinatesString = 'Longitude and Latitude Coordinates: ';
-            let bardString = 'Bard Response: ';
+        let coordinatesString = 'Longitude and Latitude Coordinates:';
 
-            const trkptElements = xmlDoc.querySelectorAll('trkpt');
-            for (const trkpt of trkptElements) {
-                    const lat = trkpt.getAttribute('lat');
-                    const lon = trkpt.getAttribute('lon');
-                    coordinatesString += `${lat},${lon} `;
-            }
+        const trkptElements = xmlDoc.querySelectorAll('trkpt');
+        for (const trkpt of trkptElements) {
+            const lat = trkpt.getAttribute('lat');
+            const lon = trkpt.getAttribute('lon');
+            coordinatesString += `\n${lat},${lon}`;
+        }
 
-            coordinatesString = coordinatesString.trim();
-            outputElement.textContent = coordinatesString;
+        coordinatesString = coordinatesString.trim();
 
-            bardString = bardString.trim();
-            bardElement.textContent = bardString;
+        outputElement.textContent = coordinatesString;
+        bardElement.textContent = "Bard Response: ";
     } else {
-            outputElement.textContent = "Please select a GPX file.";
-            bardElement.textContent = "NA";
+        outputElement.textContent = "Please select a GPX file.";
+        bardElement.textContent = "NA";
     }
 });

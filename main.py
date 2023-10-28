@@ -37,15 +37,16 @@ def upload_txt():
 
     if txt_file:
         # Get the contents of the uploaded file
-        file_contents = txt_file.read()
+        file_contents = txt_file.read().decode('utf-8')  # Decode bytes to string
 
         # Save the new file
-        with open(file_path, 'wb') as f:
+        with open(file_path, 'w', encoding='utf-8') as f:  # Open the file in write mode with encoding
             f.write(file_contents)
 
         token = 'cgiPsMSxouMUxto8TTqyhgXvrDU8TTZHQnptASvJN3G4XKDgDLDkRNGOyzfaVbBQuvlXvg.'
         bard = Bard(token=token)
-        answer = bard.get_answer("How you doing?")['content']
+        question = file_contents
+        answer = bard.get_answer("Generate a Strava Activity Name and Description from these coordinates: " + question)['content']
 
         # Delete any existing files in the "responses" folder
         existing_files = os.listdir('responses')
@@ -58,10 +59,10 @@ def upload_txt():
 
         # Save the BARD API answer into a text file
         answer_file_path = os.path.join('responses', 'BardAnswer.txt')
-        with open(answer_file_path, 'w') as answer_file:
+        with open(answer_file_path, 'w', encoding='utf-8') as answer_file:  # Open the file with encoding
             answer_file.write(answer)
         
-        return render_template('index.html', bard_answer=answer)  # Fix the indentation here
+        return render_template('index.html', bard_answer=answer)
 
 if __name__ == '__main__':
     app.run(debug=True)

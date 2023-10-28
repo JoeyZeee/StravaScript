@@ -8,13 +8,21 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>StravaScript: Bard-Powered Titles and Descriptions - Joey Zambreno</h1>
+    <h1>StravaScript: Bard-Powered Text - Joey Zambreno</h1>
     <form id="upload-form" enctype="multipart/form-data">
         <input type="file" id="gpx-file" accept=".gpx" required>
+        <label for="gpx-file">Submit GPX File ----- > </label>
         <input type="submit" value="Submit">
     </form>
+    <div class="form-container">
+        <form id="txt-upload-form" method="POST" enctype="multipart/form-data" action="/upload">
+            <input type="file" name="txt_file" accept=".txt" required>
+            <label for="txt_file">Submit TXT File ----- > </label>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
     <pre id="output"></pre>
     <pre id="bard"></pre>
-    <script src="{{ url_for('static', filename='main.js') }}"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script> <!-- Include the main.js file -->
 </body>
 </html>

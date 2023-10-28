@@ -25,12 +25,18 @@ h1 {
 #upload-form {
     text-align: center;
     padding: 20px;
+    border: 1px solid #ccc; /* Add a border to the form */
+    background-color: #fff;
+    margin: 20px;
 }
 
-/* Style the file input and submit button */
-#gpx-file {
-    padding: 10px;
-    border: 1px solid #ccc;
+/* Add a border around the entire second form */
+#txt-upload-form {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc; /* Add a border to the form */
+    background-color: #fff;
+    margin: 20px;
 }
 
 input[type="submit"] {

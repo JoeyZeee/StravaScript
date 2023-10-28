@@ -26,7 +26,6 @@ document.getElementById("upload-form").addEventListener("submit", async function
         coordinatesString = coordinatesString.trim();
 
         outputElement.textContent = coordinatesString;
-        bardElement.textContent = "Bard Response: ";
 
         // Create a Blob with the coordinates string
         const blob = new Blob([coordinatesString], { type: 'text/plain' });

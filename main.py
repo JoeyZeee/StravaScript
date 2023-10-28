@@ -43,10 +43,10 @@ def upload_txt():
         with open(file_path, 'w', encoding='utf-8') as f:  # Open the file in write mode with encoding
             f.write(file_contents)
 
-        token = 'cgiPsMSxouMUxto8TTqyhgXvrDU8TTZHQnptASvJN3G4XKDgDLDkRNGOyzfaVbBQuvlXvg.'
+        token = 'cgiPsC4jxNEegMF9hvJ0zdAA39RoqnLkwuHW2StReWGOfcNXRFjYpJW9VUoQL9RSHMyI7w.'
         bard = Bard(token=token)
         question = file_contents
-        answer = bard.get_answer("Generate a Strava Activity Name and Description from these coordinates: " + question)['content']
+        answer = bard.get_answer("Generate a Strava Activity Name and Description from these coordinates: " + question + ". Don't ever include the distance of the activity, or the type of the activity. ALso never generate a google maps link for the activity.")['content']
 
         # Delete any existing files in the "responses" folder
         existing_files = os.listdir('responses')

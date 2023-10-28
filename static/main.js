@@ -14,7 +14,7 @@ document.getElementById("upload-form").addEventListener("submit", async function
         const parser = new DOMParser();
         const xmlDoc = parser.parseFromString(text, "text/xml");
 
-        let coordinatesString = 'Longitude and Latitude Coordinates:';
+        let coordinatesString = 'Longitude and Latitude Coordinates:\n';
 
         const trkptElements = xmlDoc.querySelectorAll('trkpt');
         for (const trkpt of trkptElements) {
@@ -27,6 +27,23 @@ document.getElementById("upload-form").addEventListener("submit", async function
 
         outputElement.textContent = coordinatesString;
         bardElement.textContent = "Bard Response: ";
+
+        // Create a Blob with the coordinates string
+        const blob = new Blob([coordinatesString], { type: 'text/plain' });
+
+        // Create a temporary anchor element for the download
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'coordinates.txt';
+
+        // Trigger a click event on the anchor to initiate the download
+        a.style.display = 'none';
+        document.body.appendChild(a);
+        a.click();
+
+        // Remove the temporary anchor
+        document.body.removeChild(a);
+        
     } else {
         outputElement.textContent = "Please select a GPX file.";
         bardElement.textContent = "NA";

@@ -2,24 +2,6 @@
 
 StravaScript is a small Flask project that interfaces with the unofficial Bard API. You can upload a GPX file, and the program outputs the raw longitude and latitude values of that activity. Bard then takes that as an input, and generates an activity title and description, for running social medias like Strava.
 
-## For Joey...
-
-Add this code into the main javascript file, so it puts the coordinates data into the file:
-
-```
-var fs = require("fs");
-
-let fInput = "Test";
-fs.writeFile('Coordinates.txt', fInput, (err) => {
-	 if (err) throw err;
-	 else{
-			console.log("The file is updated with the coordinate data");
-	 }
-})
-```
-
-(Delete this from the README.md page after putting it in)
-
 ## Downloading
 
 1. Download and unzip these project files

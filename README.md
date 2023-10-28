@@ -23,14 +23,16 @@ StravaScript is a small Flask project that interfaces with the unofficial Bard A
 3. Copy the title and description into your Strava Activity
 
 4. Adjust however nessecary for you
+
+## Debugging Issues
+
+1. 
   
 ## Roadmap
 
 - Add Strava API interfacing
 
 - Automatically upload name and description
-  
-- Better UI
 
 ## Links
 

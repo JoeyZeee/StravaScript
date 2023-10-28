@@ -17,7 +17,10 @@ document.getElementById("upload-form").addEventListener("submit", async function
         let coordinatesString = 'Longitude and Latitude Coordinates:\n';
 
         const trkptElements = xmlDoc.querySelectorAll('trkpt');
-        for (const trkpt of trkptElements) {
+        const maxCoordinates = 100; // Set the maximum number of coordinates you want to include
+
+        for (let i = 0; i < Math.min(maxCoordinates, trkptElements.length); i++) {
+            const trkpt = trkptElements[i];
             const lat = trkpt.getAttribute('lat');
             const lon = trkpt.getAttribute('lon');
             coordinatesString += `\n${lat},${lon}`;

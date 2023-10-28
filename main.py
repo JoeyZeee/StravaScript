@@ -7,10 +7,6 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/upload-page')
-def upload_page():
-    return render_template('upload.html')
-
 @app.route('/upload', methods=['POST'])
 def upload_txt():
     txt_file = request.files['txt_file']
@@ -45,7 +41,8 @@ def upload_txt():
         with open(file_path, 'wb') as f:
             f.write(file_contents)
 
-        return 'Text file uploaded and saved successfully'
+        return 'Text file uploaded and saved successfully! Press the arrow to return to the previous page, and see what Bard suggested!'
+    
 
 if __name__ == '__main__':
     app.run(debug=True)

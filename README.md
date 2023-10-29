@@ -25,10 +25,16 @@ StravaScript is a small Flask project that interfaces with the unofficial Bard A
 1. Download GPX data from wherever your activity is stored (Make sure it has a .gpx tag, or the program won't work)
    
 2. Upload that file into the website
-   
-3. Copy the title and description into your Strava Activity
 
-4. Adjust however nessecary for you
+3. Accept the second download of the longitude and latitude
+
+4. Upload that second file into the website
+
+5. Wait for Bard's response (5-10 Seconds)
+   
+6. Copy the title and description into your Strava Activity
+
+7. Adjust, or rerun however many times you need
 
 ## Debugging Issues
 

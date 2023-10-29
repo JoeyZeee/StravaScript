@@ -26,7 +26,9 @@ StravaScript is a small Flask project that interfaces with the unofficial Bard A
 
 ## Debugging Issues
 
-1. 
+Read the issues at the [Bard API Github:](https://github.com/dsdanielpark/Bard-API/issues)
+
+Contact [jzambreno@gmail.com](jzambreno@gmail.com) for other issues
   
 ## Roadmap
 

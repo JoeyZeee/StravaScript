@@ -47,7 +47,7 @@ def upload_txt():
         with open(file_path, 'w', encoding='utf-8') as f:  # Open the file in write mode with encoding
             f.write(file_contents)
 
-        token = 'cgiPsDyqRMBPmhNUlQeiwZMLgESQLoNOBQ00HnmmBDHeF9mOeKVmbYo_uGeK4Ahtdym1RQ.'
+        token = 'xxxxxxxx' # Change this to your __Secure-1PSID Token (See README.md) for more deatails...
         bard = Bard(token=token)
         question = file_contents
         answer = bard.get_answer("Generate a Strava Activity Name and Description from these coordinates: " + question + ". Don't ever include the distance of the activity, or the type of the activity. ALso never generate a google maps link for the activity.")['content']

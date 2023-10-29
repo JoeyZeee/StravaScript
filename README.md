@@ -10,9 +10,15 @@ StravaScript is a small Flask project that interfaces with the unofficial Bard A
    
 3. Enter: `pip install -r requirements.txt` into your terminal
 
-4. Run: `python3 main.py` in your terminal, and access the Flask live [server](http://127.0.0.1:5000/)
+4. Go to [https://bard.google.com/chat](https://bard.google.com/chat)
 
-5. Enjoy!
+5. Use `Fn + F12`, and navigate to Application, and then Cookies
+
+6. Copy the __Secure-1PSID cookie into `main.py` before running the program
+
+7. Run: `python3 main.py` in your terminal, and access the Flask live [server](http://127.0.0.1:5000/)
+
+8. Enjoy!
 
 ## Usage
 
